@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(218, 40, 40);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: rgba(253, 253, 45, 0.873);
+}
+
+/* Css da box com os inputs */
+
+.login-container {
+    width: 400px;
+    padding: 40px 30px 40px;
+    background-color: #d9d9d9;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Css do input */
+.login-container input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 63px;
+    border: none;
+    border-radius: 25px;
+    border-color: white;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Estilos dos links de cadastro e esqueci a senha */
+.links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilo do botão */
+.btn-entrar {
+    width: 185px;
+    height: 63px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
