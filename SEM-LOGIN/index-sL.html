@@ -47,18 +47,20 @@
         </section>
     </nav>
 
-    <!-- Lista de receitas -->
+    <!-- 1º -->
     <main class="lista-receitas">
         <button
             type="button"
             class="cartao-receita"
             data-bs-toggle="modal"
-            data-bs-target="#modalReceita"
+            data-bs-target="#modalReceita-1"
         >
             <span class="imagem-miniatura">IMAGEM</span>
 
             <span class="informacoes-miniatura">
                 <span class="nome-miniatura">NOME:</span>
+                </br>
+                </br>
                 <span class="descricao-miniatura">• DESCRIÇÃO...</span>
             </span>
         </button>
@@ -67,9 +69,9 @@
     <!-- Modal da receita -->
     <div
         class="modal fade modal-receita"
-        id="modalReceita"
-        tabindex="-1"
-        aria-labelledby="modalReceitaTitulo"
+        id="modalReceita-1"
+        tabindex="-1" 
+        aria-labelledby="modalReceita1Titulo"
         aria-hidden="true"
     >
         <div class="modal-dialog">
@@ -88,14 +90,78 @@
                         <div class="imagem-grande">IMAGEM</div>
 
                         <div class="receita-informacoes">
-                            <h2 class="receita-nome" id="modalReceitaTitulo">
+                            <h2 class="receita-nome" id="modalReceita1Titulo">
                                 NOME:
                             </h2>
                             <p class="receita-descricao">• DESCRIÇÃO...</p>
 
-                            <div class="indicador-clique" aria-hidden="true">
-                                <i class="bi bi-hand-index-thumb"></i>
-                            </div>
+                        </div>
+                    </section>
+
+                    <section class="receita-detalhes">
+                        <div class="detalhe-coluna">
+                            <h3 class="detalhe-titulo">INGREDIENTES:</h3>
+                            <p class="detalhe-descricao">DESCRIÇÃO</p>
+                        </div>
+
+                        <div class="detalhe-coluna">
+                            <h3 class="detalhe-titulo">PREPARO:</h3>
+                            <p class="detalhe-descricao">DESCRIÇÃO</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2º -->
+    <main class="lista-receitas">
+        <button
+            type="button"
+            class="cartao-receita"
+            data-bs-toggle="modal"
+            data-bs-target="#modalReceita-2"
+        >
+            <span class="imagem-miniatura">IMAGEM</span>
+
+            <span class="informacoes-miniatura">
+                <span class="nome-miniatura">NOME:</span>
+                </br>
+                </br>
+                <span class="descricao-miniatura">• DESCRIÇÃO...</span>
+            </span>
+        </button>
+    </main>
+
+    <!-- Modal da receita -->
+    <div
+        class="modal fade modal-receita"
+        id="modalReceita-2"
+        tabindex="-1"
+        aria-labelledby="modalReceita2Titulo"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button
+                    type="button"
+                    class="botao-fechar"
+                    data-bs-dismiss="modal"
+                    aria-label="Fechar"
+                >
+                    <i class="bi bi-x"></i>
+                </button>
+
+                <div class="modal-body">
+                    <section class="receita-topo">
+                        <div class="imagem-grande">IMAGEM</div>
+
+                        <div class="receita-informacoes">
+                            <h2 class="receita-nome" id="modalReceita2Titulo">
+                                NOME:
+                            </h2>
+                            <p class="receita-descricao">• DESCRIÇÃO...</p>
+
                         </div>
                     </section>
 
