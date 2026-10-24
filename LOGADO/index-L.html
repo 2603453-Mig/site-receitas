@@ -65,7 +65,7 @@
           <span class="informacoes-miniatura">
               <span class="nome-miniatura">Nome: Bolo de Cenoura</span>
               <br><br>
-              <span class="descricao-miniatura">• DESCRIÇÃO...</span>
+              <span class="descricao-miniatura">• O bolo de cenoura é uma receita clássica que faz sucesso no café da manhã, lanche da tarde ou para momentos especiais com a família e amigos. A massa é feita no liquidificador e fica pronta em menos de 1 hora.</span>
           </span>
 
           <button
@@ -110,6 +110,113 @@
                             </h2>
 
                             <p class="receita-descricao">
+                                • O bolo de cenoura é uma receita clássica que faz sucesso no café da manhã, lanche da tarde ou para momentos especiais com a família e amigos. A massa é feita no liquidificador e fica pronta em menos de 1 hora.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="receita-detalhes">
+                        <div class="detalhe-coluna">
+                            <h3 class="detalhe-titulo">INGREDIENTES:  </h3>
+                            <p class="detalhe-descricao">
+Massa <br><br>
+● 3 cenouras médias <br>
+● 3 ovos <br>
+● 2 xícaras de açúcar <br>
+● 1 xícara de óleo de canola <br>
+● 2 xícaras de farinha de trigo <br>
+● 1 pitada de sal <br>
+● 1 colher de sopa de fermento em pó <br> <br>
+Cobertura <br> <br>
+● 5 colheres de sopa de açúcar <br>
+● 3 colheres de sopa de chocolate em pó <br>
+● 2 colheres de sopa de manteiga <br>
+● 2 colheres de sopa de leite <br></p>
+                        </div>
+
+                        <div class="detalhe-coluna">
+                            <h3 class="detalhe-titulo">PREPARO:</h3>
+                            <p class="detalhe-descricao">Massa <br><br>
+1. No liquidificador, coloque 3 cenouras médias, 3 ovos, 1 xícara de óleo de canola e 2 xícaras de açúcar. Bata até ficar homogêneo. <br>
+2. Em uma tigela, coloque 2 xícaras de farinha de trigo, 1 pitada de sal e 1 colher de sopa de fermento em pó. Misture. <br>
+3. Em seguida, adicione a mistura do liquidificador na tigela. <br>
+4. Com um fouet, misture até ficar homogêneo. <br>
+5. Transfira a massa para uma forma untada e enfarinhada. <br>
+6. Leve para assar em forno preaquecido a 180 graus Celsius por 40 minutos. <br> <br>
+Cobertura <br> <br>
+1. Em uma panela, coloque 5 colheres de sopa de açúcar, 3 colheres de sopa 
+de chocolate em pó, 2 colheres de sopa de leite e 2 colheres de sopa de
+manteiga sem sal. <br>
+2. Mexa e deixe cozinhar até levantar fervura. <br>
+3. Assim que a mistura soltar do fundo, está pronta a cobertura. <br>
+4. Espere o bolo esfriar e derrame a calda ainda quente sobre ele. <br>
+5. Espalhe a cobertura e deixe esfriar antes de servir.<br></p>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 1º -->
+    <!-- 2º -->
+    <main class="lista-receitas">
+      <article
+          class="cartao-receita"
+          role="button"
+          tabindex="0"
+          data-modal="#modalReceita-2"
+      >
+          <span class="imagem-miniatura">IMAGEM</span>
+
+          <span class="informacoes-miniatura">
+              <span class="nome-miniatura">NOME: Pão de Queijo</span>
+              <br><br>
+              <span class="descricao-miniatura">• DESCRIÇÃO...</span>
+          </span>
+
+          <button
+              type="button"
+              class="botao-favorito"
+              aria-label="Salvar nos favoritos"
+              aria-pressed="false"
+              data-receita-id="receita-2"
+          >
+              <i class="bi bi-star"></i>
+          </button>
+      </article>
+    </main>
+
+    <!-- Modal da receita -->
+    <div
+        class="modal fade modal-receita"
+        id="modalReceita-2"
+        tabindex="-1"
+        aria-labelledby="modalReceita1Titulo"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <button
+                    type="button"
+                    class="botao-fechar"
+                    data-bs-dismiss="modal"
+                    aria-label="Fechar"
+                >
+                    <i class="bi bi-x"></i>
+                </button>
+
+                <div class="modal-body">
+                    <section class="receita-topo">
+                        <div class="imagem-grande">IMAGEM</div>
+
+                        <div class="receita-informacoes">
+                            <h2 class="receita-nome" id="modalReceita2Titulo">
+                                NOME:
+                            </h2>
+
+                            <p class="receita-descricao">
                                 • DESCRIÇÃO...
                             </p>
                         </div>
@@ -131,8 +238,8 @@
             </div>
         </div>
     </div>
-    <!-- 1º -->
     <!-- 2º -->
+    <!-- 3º -->
     <main class="lista-receitas">
       <article
           class="cartao-receita"
@@ -211,8 +318,7 @@
             </div>
         </div>
     </div>
-    <!-- 2º -->
-
+    <!-- 3º -->
     <button
         type="button"
         class="btn btn-primary botao-adicionar"
