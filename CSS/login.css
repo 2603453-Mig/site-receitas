@@ -2,67 +2,130 @@ body {
     background-color: rgb(218, 40, 40);
     margin: 0;
     min-height: 100vh;
+    padding: 30px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
+    margin: 0;
     color: rgba(253, 253, 45, 0.873);
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
 }
 
 /* Css da box com os inputs */
-
 .login-container {
-    width: 400px;
-    padding: 40px 30px 40px;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
     background-color: #d9d9d9;
     border-radius: 25px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 22px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* Css do input */
 .login-container input {
     width: 100%;
     box-sizing: border-box;
-    height: 63px;
-    border: none white;
-    border-radius: 25px;
+    height: 58px;
+    padding: 0 18px;
+    border: 2px solid transparent;
+    border-radius: 18px;
+    background-color: #fff;
+    color: #222;
 
-    text-align: center;
+    text-align: left;
+    font-family: inherit;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
+
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-container input::placeholder {
+    color: #777;
+    opacity: 1;
+}
+
+.login-container input:focus {
+    border-color: rgb(218, 40, 40);
+    box-shadow: 0 0 0 3px rgba(218, 40, 40, 0.12);
 }
 
 /* Estilos dos links de cadastro e esqueci a senha */
 .links {
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
 }
 
 .links a {
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
-    color: black;
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 /* Estilo do botão */
 .btn-entrar {
     width: 185px;
-    height: 63px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 25px;
+    min-height: 58px;
+    margin-top: 2%;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid transparent;
+    border-radius: 20px;
     background-color: white;
 
+    color: #000;
+    font-family: inherit;
     font-size: 18px;
     font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.btn-entrar:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-entrar:active {
+    transform: scale(0.97);
+}
+
+.btn-entrar:focus-visible {
+    outline: 3px solid rgba(253, 253, 45, 0.873);
+    outline-offset: 3px;
 }

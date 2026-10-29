@@ -3,11 +3,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding-top: 129px; /* espaço ocupado pela navbar fixa */
     font-family: Arial, Helvetica, sans-serif;
     background: #fff;
+    color: #111;
 }
 
 /* Navbar fixa: cabeçalho + pesquisa */
@@ -20,11 +25,12 @@ body {
 }
 
 .cabecalho {
-    height: 54px;
+    min-height: 54px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 36px 0 18px;
+    gap: 12px;
+    padding: 7px 30px 7px 18px;
     background: #ff3038;
 }
 
@@ -33,53 +39,101 @@ body {
     color: #111;
     font-size: 26px;
     font-weight: 800;
+    line-height: 1.2;
+}
+
+.titulo a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+}
+
+.titulo a:hover,
+.titulo a:focus,
+.titulo a:visited,
+.titulo a:active {
+    color: inherit;
+    text-decoration: none;
 }
 
 .botoes-navbar {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 10px;
 }
 
-.botao-entrar {
+.botoes-navbar a {
+    text-decoration: none;
+}
+
+.botao-log {
     width: 102px;
-    height: 40px;
+    min-height: 40px;
+    padding: 0 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     border: 0;
     border-radius: 24px;
     background: #ff7028;
     color: #fff;
     font-size: 14px;
     font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.botao-entrar:hover {
+.botao-log:hover {
     background: #ff4314;
-    color: #000000;
+    color: #000;
+    text-decoration: none;
+}
+
+.botao-log:focus-visible,
+.botao-salvar:focus-visible {
+    outline: 2px solid #0754b9;
+    outline-offset: 3px;
 }
 
 .botao-salvar {
     width: 102px;
-    height: 40px;
+    min-height: 40px;
+    padding: 0 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     border: 0;
     border-radius: 24px;
-    background: none;
-    color: #000000;
+    background: transparent;
+    color: #000;
     font-size: 14px;
     font-weight: 700;
-    justify-content: left;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .botao-salvar:hover {
-    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Pesquisa */
 .area-pesquisa {
-    height: 75px;
+    min-height: 75px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 14px;
+    padding: 12px 16px;
     background: #ffbd59;
 }
 
@@ -89,8 +143,16 @@ body {
     height: 41px;
     display: flex;
     overflow: hidden;
+    border: 2px solid transparent;
     border-radius: 18px;
     background: #fff;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pesquisa:focus-within {
+    border-color: #0754b9;
+    box-shadow: 0 0 0 3px rgba(7, 84, 185, 0.12);
 }
 
 .campo-pesquisa {
@@ -99,19 +161,41 @@ body {
     padding: 0 14px;
     border: 0;
     outline: 0;
+    background: transparent;
+    color: #222;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.campo-pesquisa::placeholder {
+    color: #777;
 }
 
 .botao-pesquisar {
     width: 41px;
     height: 41px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: -1px;
     border: 0;
     border-radius: 50%;
     background: #0754b9;
     color: #fff;
-    font-size: 24px;
+    font-size: 23px;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
 }
 
+.botao-pesquisar:hover {
+    background: #063f8a;
+    color: #fff;
+}
+
+/* Cartões de receitas */
 /* Cartões de receitas */
 .lista-receitas {
     display: flex;
@@ -197,46 +281,51 @@ body {
 .receita-topo {
     display: grid;
     grid-template-columns: 32% minmax(0, 1fr);
-    gap: 10px;
+    gap: 14px;
 }
 
 .imagem-grande {
     width: 100%;
-    height: 198px;
+    min-height: 198px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     border-radius: 17px;
     background: #2008b8;
-    color: white;
+    color: #fff;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .receita-informacoes {
     position: relative;
     min-width: 0;
     min-height: 198px;
+    padding-right: 30px;
 }
 
 .receita-nome {
-    margin: 7px 0 10px;
+    margin: 7px 0 12px;
     font-size: clamp(23px, 4vw, 38px);
     line-height: 1.1;
     font-weight: 800;
     color: #080808;
+    overflow-wrap: anywhere;
 }
 
 .receita-descricao {
     margin: 0 0 0 15px;
     font-size: 16px;
+    line-height: 1.5;
     font-style: italic;
+    overflow-wrap: anywhere;
 }
 
 .receita-detalhes {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 9px;
+    margin-top: 18px;
 }
 
 .detalhe-coluna {
@@ -249,11 +338,11 @@ body {
 }
 
 .detalhe-coluna + .detalhe-coluna {
-    border-left: 2px solid #222;
+    border-left: 2px solid #999;
 }
 
 .detalhe-titulo {
-    margin: 0 0 8px;
+    margin: 0 0 12px;
     font-size: clamp(18px, 3vw, 24px);
     font-weight: 800;
     color: #080808;
@@ -261,7 +350,8 @@ body {
 
 .detalhe-descricao {
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.65;
     overflow-wrap: anywhere;
 }
 
@@ -272,26 +362,38 @@ body {
     top: 8px;
     right: 8px;
     z-index: 2;
-    width: 30px;
-    height: 30px;
+
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+
     border: none;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     color: #111;
-    font-size: 20px;
+    font-size: 21px;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao-fechar:hover {
+    background: #fff;
+    color: #d9232a;
+    transform: scale(1.06);
 }
 
 /* Botão de estrela */
 .botao-favorito {
     position: absolute;
     top: 8px;
-    right: 12px;
+    right: 10px;
 
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
 
     display: flex;
     align-items: center;
@@ -302,7 +404,8 @@ body {
     background: transparent;
 
     color: #000;
-    font-size: 32px;
+    font-size: 30px;
+    line-height: 1;
 
     cursor: pointer;
     z-index: 2;
@@ -312,7 +415,9 @@ body {
 
 /* Efeito ao passar o mouse */
 .botao-favorito:hover {
-    transform: scale(1.15);
+    transform: scale(1.12);
+    background: transparent;
+    color: #d99e00;
 }
 
 /* Estrela amarela quando a receita está salva */
@@ -334,11 +439,12 @@ body {
 /* Botão fixo de adicionar receita */
 .botao-adicionar {
     position: fixed;
-    right: 10px;
-    bottom: 10px;
+    right: 18px;
+    bottom: 18px;
 
-    width: 100px;
-    height: 100px;
+    width: 72px;
+    height: 72px;
+    padding: 0;
 
     display: flex;
     align-items: center;
@@ -349,21 +455,33 @@ body {
     border-radius: 50%;
 
     color: #000;
-    font-size: 50px;
+    font-size: 36px;
     font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
 
     z-index: 1050;
-    box-shadow: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    transition: background-color 0.2s ease, color 0.2s ease,
+                transform 0.2s ease;
 }
 
 /* Efeito ao passar o mouse */
 .botao-adicionar:hover {
     background-color: #f5660b;
     color: #000;
+    transform: scale(1.05);
 }
 
 /* Mantém a aparência ao clicar */
 .botao-adicionar:active {
-    background-color: #e85d08 !important;
-    color: #000 !important;
+    background-color: #e85d08;
+    color: #000;
+    transform: scale(0.96);
+}
+
+.botao-adicionar:focus-visible {
+    outline: 3px solid #0754b9;
+    outline-offset: 3px;
 }
