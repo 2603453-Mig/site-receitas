@@ -1,365 +1,981 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receitas Sensacionais</title>
 
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- CSS global do projeto -->
-    <link rel="stylesheet" href="../CSS/global.css">
-</head>
+    <link rel="stylesheet" href="../CSS/global.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Navbar fixa: cabeçalho e pesquisa -->
     <nav class="navbar-fixa">
-        <header class="cabecalho">
-            <h1 class="titulo">
-                <a href="index-L.html">TITULO</a>
-            </h1>
-            <div class="botoes-navbar">
-                <a href="salvos.html" class="botao-salvar">SALVOS</a>
-                <a href="../SEM-LOGIN/index-sL.html" class="botao-log">SAIR</a>
-            </div>
-        </header>
+      <header class="cabecalho">
+        <h1 class="titulo">
+          <a href="index-L.html">Receitas Sensacionais</a>
+        </h1>
+        <div class="botoes-navbar">
+          <a href="salvos.html" class="botao-salvar">SALVOS</a>
+          <a href="../SEM-LOGIN/index-sL.html" class="botao-log">SAIR</a>
+        </div>
+      </header>
 
-        <section class="area-pesquisa">
-            <form class="pesquisa" role="search" id="formPesquisa">
-                <input type="search" class="campo-pesquisa" aria-label="Pesquisar receitas">
-                <button type="submit" class="botao-pesquisar" aria-label="Pesquisar">
-                    <i class="bi bi-search"></i>
-                </button>
-            </form>
-        </section>
+      <section class="area-pesquisa">
+        <form class="pesquisa" role="search" id="formPesquisa">
+          <input
+            type="search"
+            class="campo-pesquisa"
+            aria-label="Pesquisar receitas"
+          />
+          <button type="submit" class="botao-pesquisar" aria-label="Pesquisar">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </section>
     </nav>
 
     <!-- 1º -->
     <main class="lista-receitas">
-        <article class="cartao-receita" role="button" tabindex="0" data-modal="#modalReceita-1">
-            <span class="imagem-miniatura">
-                <img src="IMAGENS/Bolo_de_Cenoura.jpeg" alt="Bolo de Cenoura">
-            </span>
+      <article
+        class="cartao-receita"
+        role="button"
+        tabindex="0"
+        data-modal="#modalReceita-1"
+      >
+        <span class="imagem-miniatura">
+          <img src="IMAGENS/Bolo_de_Cenoura.jpeg" alt="Bolo de Cenoura" />
+        </span>
 
-            <span class="informacoes-miniatura">
-                <span class="nome-miniatura">Nome: Bolo de Cenoura</span>
-                <br><br>
-                <span class="descricao-miniatura">• O bolo de cenoura é uma receita clássica que faz sucesso no café da
-                    manhã, lanche da tarde ou para momentos especiais com a família e amigos. A massa é feita no
-                    liquidificador e fica pronta em menos de 1 hora.</span>
-            </span>
+        <span class="informacoes-miniatura">
+          <span class="nome-miniatura">Nome: Bolo de Cenoura</span>
+          <br /><br />
+          <span class="descricao-miniatura"
+            >• O bolo de cenoura é uma receita clássica que faz sucesso no café
+            da manhã, lanche da tarde ou para momentos especiais com a família e
+            amigos. A massa é feita no liquidificador e fica pronta em menos de
+            1 hora.</span
+          >
+        </span>
 
-            <button type="button" class="botao-favorito" aria-label="Salvar nos favoritos" aria-pressed="false"
-                data-receita-id="receita-1">
-                <i class="bi bi-star"></i>
-            </button>
-        </article>
+        <button
+          type="button"
+          class="botao-favorito"
+          aria-label="Salvar nos favoritos"
+          aria-pressed="false"
+          data-receita-id="receita-1"
+        >
+          <i class="bi bi-star"></i>
+        </button>
+      </article>
     </main>
 
     <!-- Modal da receita -->
-    <div class="modal fade modal-receita" id="modalReceita-1" tabindex="-1" aria-labelledby="modalReceita1Titulo"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <div
+      class="modal fade modal-receita"
+      id="modalReceita-1"
+      tabindex="-1"
+      aria-labelledby="modalReceita1Titulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="botao-fechar"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+          >
+            <i class="bi bi-x"></i>
+          </button>
 
-                <button type="button" class="botao-fechar" data-bs-dismiss="modal" aria-label="Fechar">
-                    <i class="bi bi-x"></i>
-                </button>
+          <div class="modal-body">
+            <section class="receita-topo">
+              <div class="imagem-grande">
+                <img src="IMAGENS/Bolo_de_Cenoura.jpeg" alt="Bolo de Cenoura" />
+              </div>
 
-                <div class="modal-body">
-                    <section class="receita-topo">
-                        <div class="imagem-grande"><img src="IMAGENS/Bolo_de_Cenoura.jpeg" alt="Bolo de Cenoura"></div>
+              <div class="receita-informacoes">
+                <h2 class="receita-nome" id="modalReceita1Titulo">
+                  Bolo de Cenoura
+                </h2>
 
-                        <div class="receita-informacoes">
-                            <h2 class="receita-nome" id="modalReceita1Titulo">
-                                Bolo de Cenoura
-                            </h2>
+                <p class="receita-descricao">
+                  • O bolo de cenoura é uma receita clássica que faz sucesso no
+                  café da manhã, lanche da tarde ou para momentos especiais com
+                  a família e amigos. A massa é feita no liquidificador e fica
+                  pronta em menos de 1 hora.
+                </p>
+              </div>
+            </section>
 
-                            <p class="receita-descricao">
-                                • O bolo de cenoura é uma receita clássica que faz sucesso no café da manhã, lanche da
-                                tarde ou para momentos especiais com a família e amigos. A massa é feita no
-                                liquidificador e fica pronta em menos de 1 hora.
-                            </p>
-                        </div>
-                    </section>
+            <section class="receita-detalhes">
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">INGREDIENTES:</h3>
+                <p class="detalhe-descricao">
+                  Massa <br /><br />
+                  ● 3 cenouras médias <br />
+                  ● 3 ovos <br />
+                  ● 2 xícaras de açúcar <br />
+                  ● 1 xícara de óleo de canola <br />
+                  ● 2 xícaras de farinha de trigo <br />
+                  ● 1 pitada de sal <br />
+                  ● 1 colher de sopa de fermento em pó <br />
+                  <br />
+                  Cobertura <br />
+                  <br />
+                  ● 5 colheres de sopa de açúcar <br />
+                  ● 3 colheres de sopa de chocolate em pó <br />
+                  ● 2 colheres de sopa de manteiga <br />
+                  ● 2 colheres de sopa de leite <br />
+                </p>
+              </div>
 
-                    <section class="receita-detalhes">
-                        <div class="detalhe-coluna">
-                            <h3 class="detalhe-titulo">INGREDIENTES: </h3>
-                            <p class="detalhe-descricao">
-                                Massa <br><br>
-                                ● 3 cenouras médias <br>
-                                ● 3 ovos <br>
-                                ● 2 xícaras de açúcar <br>
-                                ● 1 xícara de óleo de canola <br>
-                                ● 2 xícaras de farinha de trigo <br>
-                                ● 1 pitada de sal <br>
-                                ● 1 colher de sopa de fermento em pó <br> <br>
-                                Cobertura <br> <br>
-                                ● 5 colheres de sopa de açúcar <br>
-                                ● 3 colheres de sopa de chocolate em pó <br>
-                                ● 2 colheres de sopa de manteiga <br>
-                                ● 2 colheres de sopa de leite <br></p>
-                        </div>
-
-                        <div class="detalhe-coluna">
-                            <h3 class="detalhe-titulo">PREPARO:</h3>
-                            <p class="detalhe-descricao">Massa <br><br>
-                                1. No liquidificador, coloque 3 cenouras médias, 3 ovos, 1 xícara de óleo de canola e 2
-                                xícaras de açúcar. Bata até ficar homogêneo. <br>
-                                2. Em uma tigela, coloque 2 xícaras de farinha de trigo, 1 pitada de sal e 1 colher de
-                                sopa de fermento em pó. Misture. <br>
-                                3. Em seguida, adicione a mistura do liquidificador na tigela. <br>
-                                4. Com um fouet, misture até ficar homogêneo. <br>
-                                5. Transfira a massa para uma forma untada e enfarinhada. <br>
-                                6. Leve para assar em forno preaquecido a 180 graus Celsius por 40 minutos. <br> <br>
-                                Cobertura <br> <br>
-                                1. Em uma panela, coloque 5 colheres de sopa de açúcar, 3 colheres de sopa
-                                de chocolate em pó, 2 colheres de sopa de leite e 2 colheres de sopa de
-                                manteiga sem sal. <br>
-                                2. Mexa e deixe cozinhar até levantar fervura. <br>
-                                3. Assim que a mistura soltar do fundo, está pronta a cobertura. <br>
-                                4. Espere o bolo esfriar e derrame a calda ainda quente sobre ele. <br>
-                                5. Espalhe a cobertura e deixe esfriar antes de servir.<br></p>
-                        </div>
-                    </section>
-                </div>
-
-            </div>
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">PREPARO:</h3>
+                <p class="detalhe-descricao">
+                  Massa <br /><br />
+                  1. No liquidificador, coloque 3 cenouras médias, 3 ovos, 1
+                  xícara de óleo de canola e 2 xícaras de açúcar. Bata até ficar
+                  homogêneo. <br />
+                  2. Em uma tigela, coloque 2 xícaras de farinha de trigo, 1
+                  pitada de sal e 1 colher de sopa de fermento em pó. Misture.
+                  <br />
+                  3. Em seguida, adicione a mistura do liquidificador na tigela.
+                  <br />
+                  4. Com um fouet, misture até ficar homogêneo. <br />
+                  5. Transfira a massa para uma forma untada e enfarinhada.
+                  <br />
+                  6. Leve para assar em forno preaquecido a 180 graus Celsius
+                  por 40 minutos. <br />
+                  <br />
+                  Cobertura <br />
+                  <br />
+                  1. Em uma panela, coloque 5 colheres de sopa de açúcar, 3
+                  colheres de sopa de chocolate em pó, 2 colheres de sopa de
+                  leite e 2 colheres de sopa de manteiga sem sal. <br />
+                  2. Mexa e deixe cozinhar até levantar fervura. <br />
+                  3. Assim que a mistura soltar do fundo, está pronta a
+                  cobertura. <br />
+                  4. Espere o bolo esfriar e derrame a calda ainda quente sobre
+                  ele. <br />
+                  5. Espalhe a cobertura e deixe esfriar antes de servir.<br />
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
+      </div>
     </div>
     <!-- 1º -->
     <!-- 2º -->
     <main class="lista-receitas">
-        <article class="cartao-receita" role="button" tabindex="0" data-modal="#modalReceita-2">
-            <span class="imagem-miniatura">IMAGEM</span>
+      <article
+        class="cartao-receita"
+        role="button"
+        tabindex="0"
+        data-modal="#modalReceita-2"
+      >
+        <span class="imagem-miniatura"
+          ><img src="IMAGENS/Pão de Queijo.jpeg" alt="Pão de Queijo"
+        /></span>
 
-            <span class="informacoes-miniatura">
-                <span class="nome-miniatura">NOME: Pão de Queijo</span>
-                <br><br>
-                <span class="descricao-miniatura">• DESCRIÇÃO...</span>
-            </span>
+        <span class="informacoes-miniatura">
+          <span class="nome-miniatura">Nome: Pão de Queijo</span>
+          <br /><br />
+          <span class="descricao-miniatura"
+            >• Pão de queijo é uma delícia típica de Minas Gerais, com casquinha
+            crocante por fora, interior macio e sabor irresistível de queijo.
+            Perfeito para qualquer momento do dia!
+          </span>
+        </span>
 
-            <button type="button" class="botao-favorito" aria-label="Salvar nos favoritos" aria-pressed="false"
-                data-receita-id="receita-2">
-                <i class="bi bi-star"></i>
-            </button>
-        </article>
+        <button
+          type="button"
+          class="botao-favorito"
+          aria-label="Salvar nos favoritos"
+          aria-pressed="false"
+          data-receita-id="receita-2"
+        >
+          <i class="bi bi-star"></i>
+        </button>
+      </article>
     </main>
 
     <!-- Modal da receita -->
-    <div class="modal fade modal-receita" id="modalReceita-2" tabindex="-1" aria-labelledby="modalReceita1Titulo"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <div
+      class="modal fade modal-receita"
+      id="modalReceita-2"
+      tabindex="-1"
+      aria-labelledby="modalReceita1Titulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="botao-fechar"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+          >
+            <i class="bi bi-x"></i>
+          </button>
 
-                <button type="button" class="botao-fechar" data-bs-dismiss="modal" aria-label="Fechar">
-                    <i class="bi bi-x"></i>
-                </button>
+          <div class="modal-body">
+            <section class="receita-topo">
+              <div class="imagem-grande">
+                <img src="IMAGENS/Pão de Queijo.jpeg" alt="Pão de Queijo" />
+              </div>
 
-                <div class="modal-body">
-                    <section class="receita-topo">
-                        <div class="imagem-grande">IMAGEM</div>
+              <div class="receita-informacoes">
+                <h2 class="receita-nome" id="modalReceita2Titulo">
+                  Pão de Queijo (Favorito!)
+                </h2>
 
-                        <div class="receita-informacoes">
-                            <h2 class="receita-nome" id="modalReceita2Titulo">
-                                NOME:
-                            </h2>
+                <p class="receita-descricao">
+                  Pão de queijo é uma delícia típica de Minas Gerais, com
+                  casquinha crocante por fora, interior macio e sabor
+                  irresistível de queijo. Perfeito para qualquer momento do dia!
+                </p>
+              </div>
+            </section>
 
-                            <p class="receita-descricao">
-                                • DESCRIÇÃO...
-                            </p>
-                        </div>
-                    </section>
+            <section class="receita-detalhes">
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">INGREDIENTES:</h3>
+                <p class="detalhe-descricao">
+                  ● 200 ml de leite <br />
+                  ● 100 ml de água <br />
+                  ● 80 g de óleo (1/3 de xícara, aproximadamente) <br />
+                  ● 1 colher de sopa de sal <br />
+                  ● 500 g de polvilho doce <br />
+                  ● 130 g de queijo ralado grosseiramente (mussarela, parmesão,
+                  minas etc.) <br />
+                  ● 3 ovos<br /><br />
+                </p>
+              </div>
 
-                    <section class="receita-detalhes">
-                        <div class="detalhe-coluna">
-                            <h3 class="detalhe-titulo">INGREDIENTES:</h3>
-                            <p class="detalhe-descricao">DESCRIÇÃO</p>
-                        </div>
-
-                        <div class="detalhe-coluna">
-                            <h3 class="detalhe-titulo">PREPARO:</h3>
-                            <p class="detalhe-descricao">DESCRIÇÃO</p>
-                        </div>
-                    </section>
-                </div>
-
-            </div>
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">PREPARO:</h3>
+                <p class="detalhe-descricao">
+                  1. Coloque todo o seu polvilho dentro de uma vasilha grande e
+                  reserve. <br />
+                  2. Numa panela, adicione o leite, a água, o óleo e o sal e
+                  leve ao fogo. <br />
+                  3. Quando a mistura líquida começar a ferver, retire-a do fogo
+                  e despeje todo o líquido sobre o polvilho. <br />
+                  4. Misture tudo muito bem com uma colher de pau, para que todo
+                  o líquido seja incorporado no polvilho. <br />
+                  5. Quando começar a ficar muito difícil de misturar com a
+                  colher de pau, comece a sovar a massa com as mãos. Cuidado
+                  para não queimar as mãos, pois a massa estará quente. <br />
+                  6. Depois que toda a mistura estiver homogênea, deixe a massa
+                  descansar por uns 5 a 10 minutos, para que ela esfrie. <br />
+                  7. Passado esse tempo, acrescente os ovos na massa, um a um,
+                  sempre sovando-a com as mãos.<br />
+                  8. Assim que todos os ovos estiverem bem incorporados na
+                  massa, e ela estiver pegajosa, é que está no ponto correto.
+                  <br />
+                  9. Acrescente então os queijos e sove bem a massa até que todo
+                  o queijo esteja bem distribuído na massa. <br />
+                  10. Unte sua mão com óleo e faça bolinhas com pequenas porções
+                  da massa. <br />
+                  11. Distribua essas bolinhas numa forma previamente untada,
+                  deixando o espaço de 1 a 2 dedos entre cada pãozinho. <br />
+                  12. Leve os pãezinhos para assar em forno preaquecido a 200
+                  °C, por aproximadamente 30 minutos, ou até que você veja que
+                  eles já estão bem dourados por cima. <br />
+                  13. Retire do forno e consuma ainda quente. Fica uma delícia!
+                  <br /><br />
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
+      </div>
     </div>
     <!-- 2º -->
     <!-- 3º -->
     <main class="lista-receitas">
-        <article class="cartao-receita" role="button" tabindex="0" data-modal="#modalReceita-2">
-            <span class="imagem-miniatura">IMAGEM</span>
+      <article
+        class="cartao-receita"
+        role="button"
+        tabindex="0"
+        data-modal="#modalReceita-3"
+      >
+        <span class="imagem-miniatura"
+          ><img src="IMAGENS/Cuscuz.jpeg" alt="Cuscuz de Milho"
+        /></span>
 
-            <span class="informacoes-miniatura">
-                <span class="nome-miniatura">NOME:</span>
-                <br><br>
-                <span class="descricao-miniatura">• DESCRIÇÃO...</span>
-            </span>
+        <span class="informacoes-miniatura">
+          <span class="nome-miniatura">Nome: Cuscuz de Milho</span>
+          <br /><br />
+          <span class="descricao-miniatura"
+            >• Clássico brasileiro, é excelente variação para o pão de todos os
+            dias. Fica delicioso com manteiga e faz par perfeito com umas
+            colheradas de leite de coco. Com ovo cozido, vira café da manhã dos
+            campeões.
+          </span>
+        </span>
 
-            <button type="button" class="botao-favorito" aria-label="Salvar nos favoritos" aria-pressed="false"
-                data-receita-id="receita-2">
-                <i class="bi bi-star"></i>
-            </button>
-        </article>
+        <button
+          type="button"
+          class="botao-favorito"
+          aria-label="Salvar nos favoritos"
+          aria-pressed="false"
+          data-receita-id="receita-3"
+        >
+          <i class="bi bi-star"></i>
+        </button>
+      </article>
     </main>
 
     <!-- Modal da receita -->
-    <div class="modal fade modal-receita" id="modalReceita-2" tabindex="-1" aria-labelledby="modalReceita1Titulo"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <div
+      class="modal fade modal-receita"
+      id="modalReceita-3"
+      tabindex="-1"
+      aria-labelledby="modalReceita1Titulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="botao-fechar"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+          >
+            <i class="bi bi-x"></i>
+          </button>
 
-                <button type="button" class="botao-fechar" data-bs-dismiss="modal" aria-label="Fechar">
-                    <i class="bi bi-x"></i>
-                </button>
+          <div class="modal-body">
+            <section class="receita-topo">
+              <div class="imagem-grande">
+                <img src="IMAGENS/Cuscuz.jpeg" alt="Cuscuz de Milho" />
+              </div>
 
-                <div class="modal-body">
-                    <section class="receita-topo">
-                        <div class="imagem-grande">IMAGEM</div>
+              <div class="receita-informacoes">
+                <h2 class="receita-nome" id="modalReceita2Titulo">
+                  Cuscuz de Milho
+                </h2>
 
-                        <div class="receita-informacoes">
-                            <h2 class="receita-nome" id="modalReceita2Titulo">
-                                NOME:
-                            </h2>
+                <p class="receita-descricao">
+                  • Clássico brasileiro, é excelente variação para o pão de
+                  todos os dias. Fica delicioso com manteiga e faz par perfeito
+                  com umas colheradas de leite de coco. Com ovo cozido, vira
+                  café da manhã dos campeões.
+                </p>
+              </div>
+            </section>
 
-                            <p class="receita-descricao">
-                                • DESCRIÇÃO...
-                            </p>
-                        </div>
-                    </section>
+            <section class="receita-detalhes">
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">INGREDIENTES:</h3>
+                <p class="detalhe-descricao">
+                  ● 1½ xícara (chá) de farinha de milho flocada <br />
+                  ● ½ colher (chá) de sal <br />
+                  ● ¾ de xícara (chá) de água <br />
+                  ● 2 colheres (sopa) de manteiga <br />
+                </p>
+              </div>
 
-                    <section class="receita-detalhes">
-                        <div class="detalhe-coluna">
-                            <h3 class="detalhe-titulo">INGREDIENTES:</h3>
-                            <p class="detalhe-descricao">DESCRIÇÃO</p>
-                        </div>
-
-                        <div class="detalhe-coluna">
-                            <h3 class="detalhe-titulo">PREPARO:</h3>
-                            <p class="detalhe-descricao">DESCRIÇÃO</p>
-                        </div>
-                    </section>
-                </div>
-
-            </div>
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">PREPARO:</h3>
+                <p class="detalhe-descricao">
+                  1. Numa tigela, misture a farinha de milho com o sal. Regue
+                  com a água aos poucos, mexendo com uma colher para umedecer a
+                  farinha, a textura deve ficar como a de areia molhada, bem
+                  úmida. Deixe hidratar por 10 minutos, assim os flocos ficam
+                  mais macios ao cozinhar no vapor. <br />
+                  2. Preencha o fundo da cuscuzeira com água e encaixe o cesto
+                  de vapor na panela. Transfira a farinha de milho hidratada
+                  para o cesto, sem compactar. Tampe e leve para cozinhar em
+                  fogo alto. <br />
+                  3. Assim que começar a ferver, vai sair um leve vapor pela
+                  lateral da tampa. Abaixe o fogo e deixe cozinhar por mais 10
+                  minutos até o cuscuz ficar bem macio. Verifique ao abrir a
+                  tampa: o cuscuz deve estar inflado e macio ao toque. <br />
+                  4. Desligue o fogo e, com cuidado para não se queimar ou virar
+                  o cesto, puxe a haste central para desenformar o cuscuz.
+                  Transfira para uma tigela e desfaça o cuscuz em pedaços com um
+                  garfo. <br />
+                  5. Numa tigela pequena, misture a manteiga com ¼ de xícara
+                  (chá) da água fervente da cuscuzeira. Mexa com uma colher até
+                  derreter pelo menos a metade da manteiga, ela termina de
+                  derreter com o calor do cuscuz. <br />
+                  6. Regue a água com manteiga sobre o cuscuz e misture com o
+                  garfo, a água com manteiga deixa o cuscuz mais úmido e
+                  saboroso. Sirva a seguir. <br />
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
+      </div>
     </div>
     <!-- 3º -->
+    <!-- 4º -->
+    <main class="lista-receitas">
+      <article
+        class="cartao-receita"
+        role="button"
+        tabindex="0"
+        data-modal="#modalReceita-4"
+      >
+        <span class="imagem-miniatura"
+          ><img src="IMAGENS/Lasanha.jpeg" alt="Lasanha"
+        /></span>
 
+        <span class="informacoes-miniatura">
+          <span class="nome-miniatura">Nome: Lasanha</span>
+          <br /><br />
+          <span class="descricao-miniatura">
+            • uma combinação irresistível de camadas de massa macia, molho
+            saboroso, queijo derretido e recheio suculento. Preparada com
+            carinho, é o prato perfeito para quem busca uma refeição deliciosa,
+            cremosa e cheia de sabor, ideal para compartilhar momentos especiais
+            com quem você ama!
+          </span>
+        </span>
+
+        <button
+          type="button"
+          class="botao-favorito"
+          aria-label="Salvar nos favoritos"
+          aria-pressed="false"
+          data-receita-id="receita-4"
+        >
+          <i class="bi bi-star"></i>
+        </button>
+      </article>
+    </main>
+
+    <!-- Modal da receita -->
+    <div
+      class="modal fade modal-receita"
+      id="modalReceita-4"
+      tabindex="-1"
+      aria-labelledby="modalReceita1Titulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="botao-fechar"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+          >
+            <i class="bi bi-x"></i>
+          </button>
+
+          <div class="modal-body">
+            <section class="receita-topo">
+              <div class="imagem-grande">
+                <img src="IMAGENS/Lasanha.jpeg" alt="Lasanha" />
+              </div>
+
+              <div class="receita-informacoes">
+                <h2 class="receita-nome" id="modalReceita2Titulo">
+                  Lasanha (Hmmm lasanha)
+                </h2>
+
+                <p class="receita-descricao">
+                  • uma combinação irresistível de camadas de massa macia, molho
+                  saboroso, queijo derretido e recheio suculento. Preparada com
+                  carinho, é o prato perfeito para quem busca uma refeição
+                  deliciosa, cremosa e cheia de sabor, ideal para compartilhar
+                  momentos especiais com quem você ama!
+                </p>
+              </div>
+            </section>
+
+            <section class="receita-detalhes">
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">INGREDIENTES:</h3>
+                <p class="detalhe-descricao">
+                  ● 2 colheres (sopa) de óleo <br />
+                  ● 1 cebola média picada (150 g) <br />
+                  ● 400 g de patinho bovino moído <br />
+                  ● 2 tomates médios picados (300 g) <br />
+                  ● 2 caixinhas de polpa de tomate (1040 g) <br />
+                  ● Meia xícara (chá) de água (100 ml) <br />
+                  ● 2 sachês de Tempero SAZÓN® Laranja <br />
+                  ● Meia colher (chá) de sal <br />
+                  ● 1 pacote de massa de lasanha seca direto ao forno (250 g)
+                  <br />
+                  ● 200 g de presunto fatiado <br />
+                  ● 300 g de muçarela fatiada <br />
+                </p>
+              </div>
+
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">PREPARO:</h3>
+                <p class="detalhe-descricao">
+                  1. Em uma panela grande, coloque o óleo e leve ao fogo alto
+                  para aquecer. Junte a cebola e refogue por 2 minutos.
+                  Acrescente a carne, aos poucos, e frite por 10 minutos, ou até
+                  o líquido secar. Adicione o tomate e refogue por 3 minutos, ou
+                  até que comece a desmanchar. <br />
+                  2. Junte a polpa de tomate, a água, o Tempero SAZÓN® e o sal,
+                  e deixe cozinhar em fogo baixo, com a panela semitampada, por
+                  5 minutos, ou até encorpar levemente. Retire do fogo. <br />
+                  3. Em um refratário retangular grande (23 x 35 cm), faça
+                  camadas com o molho, a massa, o presunto e a muçarela,
+                  intercalando e repetindo até finalizar com o molho e a
+                  muçarela. <br />
+                  4. Cubra com papel-alumínio e leve ao forno médio (180 graus),
+                  preaquecido, por 20 minutos, ou até que a massa fique macia.
+                  Remova o papel-alumínio e volte ao forno por mais 5 minutos,
+                  ou até dourar o queijo. <br />
+                  5. Retire do forno e sirva em seguida. <br />
+                  <br />
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4º -->
+    <!-- 5º -->
+    <main class="lista-receitas">
+      <article
+        class="cartao-receita"
+        role="button"
+        tabindex="0"
+        data-modal="#modalReceita-5"
+      >
+        <span class="imagem-miniatura"
+          ><img src="IMAGENS/Pudim.jpeg" alt="Pudim"
+        /></span>
+
+        <span class="informacoes-miniatura">
+          <span class="nome-miniatura">Nome: Pudim</span>
+          <br /><br />
+          <span class="descricao-miniatura"
+            >• Uma sobremesa irresistível, com textura cremosa, sabor delicado e
+            uma deliciosa calda de caramelo. Perfeito para adoçar o seu dia,
+            trazendo aquele gostinho de sobremesa caseira que conquista a cada
+            colherada!
+          </span>
+        </span>
+
+        <button
+          type="button"
+          class="botao-favorito"
+          aria-label="Salvar nos favoritos"
+          aria-pressed="false"
+          data-receita-id="receita-5"
+        >
+          <i class="bi bi-star"></i>
+        </button>
+      </article>
+    </main>
+
+    <!-- Modal da receita -->
+    <div
+      class="modal fade modal-receita"
+      id="modalReceita-5"
+      tabindex="-1"
+      aria-labelledby="modalReceita1Titulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="botao-fechar"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+          >
+            <i class="bi bi-x"></i>
+          </button>
+
+          <div class="modal-body">
+            <section class="receita-topo">
+              <div class="imagem-grande">
+                <img src="IMAGENS/Pudim.jpeg" alt="Pudim" />
+              </div>
+
+              <div class="receita-informacoes">
+                <h2 class="receita-nome" id="modalReceita2Titulo">Pudim</h2>
+
+                <p class="receita-descricao">
+                  • Uma sobremesa irresistível, com textura cremosa, sabor
+                  delicado e uma deliciosa calda de caramelo. Perfeito para
+                  adoçar o seu dia, trazendo aquele gostinho de sobremesa
+                  caseira que conquista a cada colherada!
+                </p>
+              </div>
+            </section>
+
+            <section class="receita-detalhes">
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">INGREDIENTES:</h3>
+                <p class="detalhe-descricao">
+                  ● 2 latas de leite condensado (395 g) <br />
+                  ● 4 ovos <br />
+                  ● 2½ xícaras (chá) de leite <br />
+                </p>
+              </div>
+
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">PREPARO:</h3>
+                <p class="detalhe-descricao">
+                  1. Preaqueça o forno a 160 ºC (temperatura baixa). <br />
+                  2. Numa tigela pequena, quebre um ovo de cada vez e transfira
+                  para uma tigela maior. Mexa com o batedor de arame para
+                  misturar as claras com as gemas. Junte o leite condensado e
+                  misture bem. <br />
+                  3. Acrescente o leite aos poucos, mexendo delicadamente com o
+                  batedor, apenas para misturar, evite fazer movimentos bruscos
+                  para não incorporar ar. Os furinhos no pudim são bolhas de ar,
+                  por isso mexa delicadamente mesmo. Deixe a massa do pudim
+                  descansando enquanto prepara o caramelo, essa pausa é
+                  essencial para eliminar possíveis bolhas de ar e garantir um
+                  pudim lisinho. <br />
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 5º -->
+    <!-- 6º -->
+    <main class="lista-receitas">
+      <article
+        class="cartao-receita"
+        role="button"
+        tabindex="0"
+        data-modal="#modalReceita-6"
+      >
+        <span class="imagem-miniatura"
+          ><img src="IMAGENS/Macarronada.jpeg" alt="Macarronada"
+        /></span>
+
+        <span class="informacoes-miniatura">
+          <span class="nome-miniatura">Nome: Macarronada</span>
+          <br /><br />
+          <span class="descricao-miniatura"
+            >• A macarronada é um prato delicioso e tradicional, preparado com
+            macarrão cozido e um saboroso molho de tomate, que pode ser
+            acompanhado de carne moída, frango, queijo ralado e temperos
+            especiais. Perfeita para reunir a família e os amigos, é uma
+            refeição que combina sabor, simplicidade e aquele gostinho caseiro
+            irresistível.
+          </span>
+        </span>
+
+        <button
+          type="button"
+          class="botao-favorito"
+          aria-label="Salvar nos favoritos"
+          aria-pressed="false"
+          data-receita-id="receita-6"
+        >
+          <i class="bi bi-star"></i>
+        </button>
+      </article>
+    </main>
+
+    <!-- Modal da receita -->
+    <div
+      class="modal fade modal-receita"
+      id="modalReceita-6"
+      tabindex="-1"
+      aria-labelledby="modalReceita1Titulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="botao-fechar"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+          >
+            <i class="bi bi-x"></i>
+          </button>
+
+          <div class="modal-body">
+            <section class="receita-topo">
+              <div class="imagem-grande">
+                <img src="IMAGENS/Macarronada.jpeg" alt="Macarronada" />
+              </div>
+
+              <div class="receita-informacoes">
+                <h2 class="receita-nome" id="modalReceita2Titulo">
+                  Macarronada
+                </h2>
+
+                <p class="receita-descricao">
+                  • A macarronada é um prato delicioso e tradicional, preparado
+                  com macarrão cozido e um saboroso molho de tomate, que pode
+                  ser acompanhado de carne moída, frango, queijo ralado e
+                  temperos especiais. Perfeita para reunir a família e os
+                  amigos, é uma refeição que combina sabor, simplicidade e
+                  aquele gostinho caseiro irresistível.
+                </p>
+              </div>
+            </section>
+
+            <section class="receita-detalhes">
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">INGREDIENTES:</h3>
+                <p class="detalhe-descricao">
+                  ● 1 pacote de macarrão tipo espaguete <br />
+                  ● 1/2 cebola picada <br />
+                  ● 03 dentes grandes de alho, picados (quantidade opcional)
+                  <br />
+                  ● Queijo ralado a gosto <br />
+                  ● 2 molhos de tomate pronto <br />
+                  ● 3 calabresas cortadas em cubos (opcional)<br />
+                </p>
+              </div>
+
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">PREPARO:</h3>
+                <p class="detalhe-descricao">
+                  1. Em uma panela grande, coloque água para cozinhar com sal a
+                  gosto e um fio de óleo. <br />
+                  2. Quando a água estiver fervendo, coloque todo o pacote de
+                  macarrão e deixe cozinhar até chegar ao ponto de “ao dente”.
+                  <br />
+                  3. Escorra e reserve em uma travessa. <br />
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 6º -->
+    <!-- 7º -->
+    <main class="lista-receitas">
+      <article
+        class="cartao-receita"
+        role="button"
+        tabindex="0"
+        data-modal="#modalReceita-7"
+      >
+        <span class="imagem-miniatura"
+          ><img
+            src="IMAGENS/Batida de Frutas Vermelhas.jpeg"
+            alt="Batida de Frutas Vermelhas"
+        /></span>
+
+        <span class="informacoes-miniatura">
+          <span class="nome-miniatura">Nome: Batida de Frutas Vermelhas</span>
+          <br /><br />
+          <span class="descricao-miniatura"
+            >• A batida de frutas vermelhas é uma bebida cremosa e refrescante,
+            preparada com uma combinação deliciosa de morangos, amoras,
+            framboesas e outras frutas selecionadas. Com sabor levemente
+            adocicado e um toque de acidez, é perfeita para acompanhar
+            refeições, refrescar os dias quentes e tornar qualquer momento ainda
+            mais especial.
+          </span>
+        </span>
+
+        <button
+          type="button"
+          class="botao-favorito"
+          aria-label="Salvar nos favoritos"
+          aria-pressed="false"
+          data-receita-id="receita-7"
+        >
+          <i class="bi bi-star"></i>
+        </button>
+      </article>
+    </main>
+
+    <!-- Modal da receita -->
+    <div
+      class="modal fade modal-receita"
+      id="modalReceita-7"
+      tabindex="-1"
+      aria-labelledby="modalReceita1Titulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="botao-fechar"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+          >
+            <i class="bi bi-x"></i>
+          </button>
+
+          <div class="modal-body">
+            <section class="receita-topo">
+              <div class="imagem-grande">
+                <img
+                  src="IMAGENS/Batida de Frutas Vermelhas.jpeg"
+                  alt="Batida de Frutas Vermelhas"
+                />
+              </div>
+
+              <div class="receita-informacoes">
+                <h2 class="receita-nome" id="modalReceita2Titulo">
+                  Batida de Frutas Vermelhas
+                </h2>
+
+                <p class="receita-descricao">
+                  • A batida de frutas vermelhas é uma bebida cremosa e
+                  refrescante, preparada com uma combinação deliciosa de
+                  morangos, amoras, framboesas e outras frutas selecionadas. Com
+                  sabor levemente adocicado e um toque de acidez, é perfeita
+                  para acompanhar refeições, refrescar os dias quentes e tornar
+                  qualquer momento ainda mais especial.
+                </p>
+              </div>
+            </section>
+
+            <section class="receita-detalhes">
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">INGREDIENTES:</h3>
+                <p class="detalhe-descricao">
+                  ● 300 ml de leite vegetal (leite de coco ou leite de amêndoas)
+                  <br />
+                  ● 1 porção de morango e/ou goji berry e/ou cranberries <br />
+                  ● 1 colher de sopa de proteína <br />
+                  ● 1 colher de sopa de linhaça <br />
+                  ● 1 colher de sopa de açúcar de coco <br />
+                </p>
+              </div>
+
+              <div class="detalhe-coluna">
+                <h3 class="detalhe-titulo">PREPARO:</h3>
+                <p class="detalhe-descricao">
+                  Acrescente todos os ingredientes no liquidificador e bata até
+                  formar uma mistura homogênea. Coloque gelo e beba em seguida.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 7º -->
     <!-- Botão adicionar -->
-    <a href="addReceita.html" class="btn btn-primary botao-adicionar" aria-label="Adicionar receita"
-        title="Adicionar receita">
-        <i class="bi bi-plus-lg"></i>
+    <a
+      href="addReceita.html"
+      class="btn btn-primary botao-adicionar"
+      aria-label="Adicionar receita"
+      title="Adicionar receita"
+    >
+      <i class="bi bi-plus-lg"></i>
     </a>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Impede que a pesquisa recarregue a página.
-        const formPesquisa = document.getElementById("formPesquisa");
+      // Impede que a pesquisa recarregue a página.
+      const formPesquisa = document.getElementById("formPesquisa");
 
-        if (formPesquisa) {
-            formPesquisa.addEventListener("submit", function (event) {
-                event.preventDefault();
-            });
+      if (formPesquisa) {
+        formPesquisa.addEventListener("submit", function (event) {
+          event.preventDefault();
+        });
+      }
+
+      // Recupera os favoritos salvos.
+      function obterFavoritos() {
+        try {
+          const dados = JSON.parse(
+            localStorage.getItem("receitasFavoritas") || "[]",
+          );
+
+          return Array.isArray(dados) ? dados : [];
+        } catch (erro) {
+          return [];
+        }
+      }
+
+      let favoritos = obterFavoritos();
+
+      // Inicializa e controla cada estrela.
+      document.querySelectorAll(".botao-favorito").forEach(function (botao) {
+        const icone = botao.querySelector("i");
+        const id = botao.dataset.receitaId;
+
+        function atualizarEstrela() {
+          const salvo = favoritos.includes(id);
+
+          botao.classList.toggle("favorito-ativo", salvo);
+          botao.setAttribute("aria-pressed", String(salvo));
+
+          if (icone) {
+            icone.className = salvo ? "bi bi-star-fill" : "bi bi-star";
+          }
         }
 
-        // Recupera os favoritos salvos.
-        function obterFavoritos() {
-            try {
-                const dados = JSON.parse(
-                    localStorage.getItem("receitasFavoritas") || "[]"
-                );
+        atualizarEstrela();
 
-                return Array.isArray(dados) ? dados : [];
-            } catch (erro) {
-                return [];
-            }
+        botao.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          if (favoritos.includes(id)) {
+            favoritos = favoritos.filter(function (item) {
+              return item !== id;
+            });
+          } else {
+            favoritos.push(id);
+          }
+
+          localStorage.setItem("receitasFavoritas", JSON.stringify(favoritos));
+
+          atualizarEstrela();
+        });
+      });
+
+      // Abre o modal somente quando o cartão é clicado,
+      // nunca quando o botão de favorito é clicado.
+      document.querySelectorAll(".cartao-receita").forEach(function (cartao) {
+        function abrirReceita(event) {
+          if (event.target.closest(".botao-favorito")) {
+            return;
+          }
+
+          const seletor = cartao.dataset.modal;
+          const modalElemento = document.querySelector(seletor);
+
+          if (modalElemento) {
+            bootstrap.Modal.getOrCreateInstance(modalElemento).show();
+          }
         }
 
-        let favoritos = obterFavoritos();
+        cartao.addEventListener("click", abrirReceita);
 
-        // Inicializa e controla cada estrela.
-        document.querySelectorAll(".botao-favorito").forEach(function (botao) {
-            const icone = botao.querySelector("i");
-            const id = botao.dataset.receitaId;
+        // Permite abrir o cartão usando Enter ou Espaço.
+        cartao.addEventListener("keydown", function (event) {
+          if (event.target !== cartao) return;
 
-            function atualizarEstrela() {
-                const salvo = favoritos.includes(id);
-
-                botao.classList.toggle("favorito-ativo", salvo);
-                botao.setAttribute("aria-pressed", String(salvo));
-
-                if (icone) {
-                    icone.className = salvo
-                        ? "bi bi-star-fill"
-                        : "bi bi-star";
-                }
-            }
-
-            atualizarEstrela();
-
-            botao.addEventListener("click", function (event) {
-                event.preventDefault();
-                event.stopPropagation();
-
-                if (favoritos.includes(id)) {
-                    favoritos = favoritos.filter(function (item) {
-                        return item !== id;
-                    });
-                } else {
-                    favoritos.push(id);
-                }
-
-                localStorage.setItem(
-                    "receitasFavoritas",
-                    JSON.stringify(favoritos)
-                );
-
-                atualizarEstrela();
-            });
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            abrirReceita(event);
+          }
         });
-
-        // Abre o modal somente quando o cartão é clicado,
-        // nunca quando o botão de favorito é clicado.
-        document.querySelectorAll(".cartao-receita").forEach(function (cartao) {
-            function abrirReceita(event) {
-                if (event.target.closest(".botao-favorito")) {
-                    return;
-                }
-
-                const seletor = cartao.dataset.modal;
-                const modalElemento = document.querySelector(seletor);
-
-                if (modalElemento) {
-                    bootstrap.Modal.getOrCreateInstance(modalElemento).show();
-                }
-            }
-
-            cartao.addEventListener("click", abrirReceita);
-
-            // Permite abrir o cartão usando Enter ou Espaço.
-            cartao.addEventListener("keydown", function (event) {
-                if (event.target !== cartao) return;
-
-                if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    abrirReceita(event);
-                }
-            });
-        });
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
