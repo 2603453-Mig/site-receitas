@@ -1,5 +1,9 @@
 body {
-    background-color: rgba(238, 145, 45, 0.862);
+    background-image: linear-gradient(#cd3b4084), url("../LOGADO/IMAGENS/PadraoComida.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     margin: 0;
     min-height: 100vh;
     padding: 35px 16px;
@@ -11,7 +15,7 @@ body {
 }
 
 h1 {
-    color: #ff3038;
+    color: #4b0407;
     font-size: 32px;
     font-weight: 800;
     text-align: center;
@@ -20,7 +24,7 @@ h1 {
 
 h2 {
     width: 100%;
-    color: #ff3038;
+    color: #4b0407;
     font-size: 22px;
     font-weight: 800;
     text-align: left;
@@ -32,7 +36,7 @@ h2 {
     width: 100%;
     max-width: 760px;
     padding: 32px;
-    background-color: #d9d9d9;
+    background-color: #ffc5c7;
     border-radius: 25px;
     margin: 0 auto;
     display: flex;
@@ -60,7 +64,7 @@ h2 {
 }
 
 .receita-container input:focus {
-    border-color: #ff7028;
+    border-color: #4b0407;
     box-shadow: 0 0 0 3px rgba(255, 112, 40, 0.15);
 }
 
@@ -84,13 +88,13 @@ h2 {
     text-align: left;
     font-family: inherit;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .receita-container textarea:focus {
-    border-color: #ff7028;
+    border-color: #4b0407;
     box-shadow: 0 0 0 3px rgba(255, 112, 40, 0.15);
 }
 
@@ -136,7 +140,7 @@ h2 {
     padding: 0;
     border: none;
     border-radius: 50%;
-    background-color: #ff3038;
+    background-color: #4b0407;
     color: #fff;
     font-size: 27px;
     font-weight: 400;
@@ -167,7 +171,7 @@ h2 {
 
     border-radius: 15px;
     background-color: #fff;
-    color: #222;
+    color: #4b0407;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
@@ -176,7 +180,7 @@ h2 {
 }
 
 .adicionar:hover {
-    background-color: #ff3038;
+    background-color: #4b0407;
     color: #fff;
 }
 
@@ -185,17 +189,17 @@ h2 {
     width: 100%;
     min-height: 48px;
     align-self: stretch;
-    border: 2px dashed #ff7028;
+    border: 2px dashed #4b0407;
     border-radius: 15px;
     background-color: transparent;
-    color: #d95617;
+    color: #4b0407;
     font-size: 26px;
     font-weight: 500;
 }
 
 #adicionar:hover {
     border-style: solid;
-    background-color: #ff7028;
+    background-color: #4b0407;
     color: #fff;
 }
 
@@ -205,11 +209,11 @@ h2 {
     min-height: 54px;
     margin-top: 8px;
     border-radius: 16px;
-    background-color: #ff3038;
+    background-color: #c80d14;
     color: #fff;
     font-size: 17px;
 }
 
 .receita-container > button:last-child:hover {
-    background-color: #d9232a;
+    background-color: #c80d14;
 }

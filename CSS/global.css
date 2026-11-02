@@ -31,12 +31,12 @@ body {
     justify-content: space-between;
     gap: 12px;
     padding: 7px 30px 7px 18px;
-    background: #ff3038;
+    background: #a50f15;
 }
 
 .titulo {
     margin: 0;
-    color: #000000;
+    color: #ffffff;
     font-size: 26px;
     font-weight: 800;
     line-height: 1.2;
@@ -78,8 +78,8 @@ body {
 
     border: 0;
     border-radius: 24px;
-    background: #ff7028;
-    color: #fff;
+    background: #fff;
+    color: #4b0407;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -89,8 +89,8 @@ body {
 }
 
 .botao-log:hover {
-    background: #ff4314;
-    color: #000;
+    background: #ffdfe0;
+    color: #4b0407;
     text-decoration: none;
 }
 
@@ -112,7 +112,7 @@ body {
     border: 0;
     border-radius: 24px;
     background: transparent;
-    color: #000;
+    color: #fff;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -122,8 +122,8 @@ body {
 }
 
 .botao-salvar:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
+    background: #ffdfe0;
+    color: #4b0407;
     text-decoration: none;
 }
 
@@ -151,7 +151,7 @@ body {
 }
 
 .pesquisa:focus-within {
-    border-color: #0754b9;
+    border-color: #881418;
     box-shadow: 0 0 0 3px rgba(7, 84, 185, 0.12);
 }
 
@@ -182,7 +182,7 @@ body {
     margin: -1px;
     border: 0;
     border-radius: 50%;
-    background: #0754b9;
+    background: #881418;
     color: #fff;
     font-size: 23px;
     cursor: pointer;
@@ -191,7 +191,7 @@ body {
 }
 
 .botao-pesquisar:hover {
-    background: #063f8a;
+    background: #4b0407;
     color: #fff;
 }
 
@@ -207,12 +207,12 @@ body {
 
 .cartao-receita {
     width: 100%;
-    max-width: 580px;
+    max-width: 700px;
     min-height: 210px;
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 8px;
+    padding: 12px;
     border: 0;
     border-radius: 18px;
     background: #d8d8d8;
@@ -251,6 +251,7 @@ body {
 }
 
 .informacoes-miniatura {
+    padding: 8px 12px;
     align-self: flex-start;
     min-width: 0;
 }
@@ -450,11 +451,11 @@ body {
     align-items: center;
     justify-content: center;
 
-    background-color: #ff7518;
+    background-color: #a50f15;
     border: none;
     border-radius: 50%;
 
-    color: #000;
+    color: #fff;
     font-size: 36px;
     font-weight: bold;
     line-height: 1;
@@ -469,19 +470,23 @@ body {
 
 /* Efeito ao passar o mouse */
 .botao-adicionar:hover {
-    background-color: #f5660b;
-    color: #000;
+    background-color: #ff3038;
+    color: #4b0407;
     transform: scale(1.05);
 }
 
 /* Mantém a aparência ao clicar */
 .botao-adicionar:active {
-    background-color: #e85d08;
-    color: #000;
+    background-color: #ff3038;
+    color: #4b0407;
     transform: scale(0.96);
 }
 
 .botao-adicionar:focus-visible {
-    outline: 3px solid #0754b9;
+    outline: 3px solid #ff3038;
     outline-offset: 3px;
+}
+
+.nome-miniatura {
+    font-weight: bold;
 }
